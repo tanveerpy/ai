@@ -1,0 +1,98 @@
+<?php
+// contact.php
+?>
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - CloudMetrics AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        slate: { 850: '#151e2e', 900: '#0f172a', 950: '#020617' },
+                        indigo: { 500: '#6366f1', 600: '#4f46e5', 700: '#4338ca' }
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style> body { font-family: 'Inter', sans-serif; } </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body class="bg-slate-950 text-slate-100 antialiased selection:bg-indigo-500 selection:text-white">
+
+    <nav class="w-full border-b border-slate-800 bg-slate-950/80 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="index.php" class="flex items-center gap-2">
+                <div class="w-8 h-8 rounded bg-indigo-600 flex items-center justify-center font-bold text-white shadow-lg shadow-indigo-600/30">
+                    <i class="fa-solid fa-chart-line"></i>
+                </div>
+                <span class="font-extrabold text-xl tracking-tight">CloudMetrics AI</span>
+            </a>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+                <a href="index.php" class="hover:text-white transition-colors">Home</a>
+            </div>
+            <div>
+                <a href="index.php#pricing" class="bg-indigo-600 hover:bg-indigo-500 text-white px-5 py-2.5 rounded-lg text-sm font-semibold transition-all shadow-lg shadow-indigo-600/20">Get Started Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-3xl mx-auto px-6 py-20 relative z-10">
+        <div class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400">Get in Touch</h1>
+            <p class="text-slate-400 text-lg">Have a question or want to work with us? Drop us a line.</p>
+        </div>
+
+        <form class="bg-slate-850 p-8 rounded-2xl border border-slate-800 space-y-6">
+            <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                    <label class="block text-sm font-medium text-slate-300 mb-2">First Name</label>
+                    <input type="text" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-slate-200 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-colors" placeholder="John">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-slate-300 mb-2">Last Name</label>
+                    <input type="text" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-slate-200 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-colors" placeholder="Doe">
+                </div>
+            </div>
+            <div>
+                <label class="block text-sm font-medium text-slate-300 mb-2">Email Address</label>
+                <input type="email" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-slate-200 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-colors" placeholder="john@company.com">
+            </div>
+            <div>
+                <label class="block text-sm font-medium text-slate-300 mb-2">Message</label>
+                <textarea rows="5" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-slate-200 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-colors" placeholder="How can we help you?"></textarea>
+            </div>
+            <button type="button" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white px-8 py-4 rounded-xl text-lg font-bold transition-all shadow-lg shadow-indigo-600/25">
+                Send Message
+            </button>
+        </form>
+    </main>
+
+    <footer class="border-t border-slate-800 bg-slate-950 py-12 mt-20">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex flex-col gap-2">
+                <div class="flex items-center gap-2">
+                    <div class="w-6 h-6 rounded bg-indigo-600 flex items-center justify-center font-bold text-white text-xs">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <span class="font-bold text-lg">CloudMetrics AI</span>
+                </div>
+                <p class="text-slate-500 text-sm">&copy; 2026 CloudMetrics AI. All rights reserved.</p>
+            </div>
+            <div class="flex flex-wrap gap-6 text-sm text-slate-400">
+                <a href="about.php" class="hover:text-white transition-colors">About Us</a>
+                <a href="contact.php" class="text-white transition-colors font-medium">Contact</a>
+                <a href="privacy.php" class="hover:text-white transition-colors">Privacy Policy</a>
+                <a href="terms.php" class="hover:text-white transition-colors">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
